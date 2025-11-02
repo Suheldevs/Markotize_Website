@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 export function Marketplace() {
   return (
-    <section id="marketplace" className="py-24 bg-muted/30">
+    <section id="marketplace" className="py-24 bg-gradient-to-b from-background to-muted/30">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
           <div className="relative overflow-hidden rounded-2xl border-2 border-border bg-card/50 backdrop-blur-sm p-12 md:p-16 animate-fade-in">
@@ -14,7 +14,7 @@ export function Marketplace() {
 
             <div className="relative z-10 text-center space-y-6">
               <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center mx-auto">
-                <Package className="h-8 w-8 text-primary" />
+                <Package className="h-8 w-8 dark:text-white text-primary" />
               </div>
 
               <h2 className="text-4xl md:text-5xl font-bold">Marketplace</h2>

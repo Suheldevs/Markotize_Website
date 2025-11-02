@@ -46,10 +46,12 @@ export function B2CSolutions() {
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
                   <CardHeader>
-                    <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
-                      <Icon className="h-6 w-6 text-primary" />
+                    <div className="flex items-center gap-2">
+                    <div className="w-12 h-12  rounded-lg bg-primary/10 flex items-center justify-center  group-hover:bg-primary/20 transition-colors">
+                      <Icon className="h-6 w-6 dark:text-white text-primary" />
                     </div>
                     <CardTitle className="text-2xl">{solution.title}</CardTitle>
+                    </div>
                   </CardHeader>
                   <CardContent>
                     <p className="text-muted-foreground">{solution.description}</p>

@@ -41,7 +41,7 @@ export function Hero() {
             </Link>
             <Link to="/contact">
               <Button size="lg" variant="outline" className="border-2">
-                Contact Sales
+                Contact Us
               </Button>
             </Link>
           </div>
