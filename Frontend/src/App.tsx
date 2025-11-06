@@ -11,9 +11,14 @@ import B2CGrowthEdge from "./pages/B2CGrowthEdge";
 import B2CScaleX from "./pages/B2CScaleX";
 import D2CDigiFuse from "./pages/D2CDigiFuse";
 import D2CBrandElevate from "./pages/D2CBrandElevate";
-import MarketplaceSEO from "./pages/MarketplaceSEO";
 import MarketplaceSocialMedia from "./pages/MarketplaceSocialMedia";
-
+import MarketplaceDetail from "./pages/MarketplaceDetail";
+import { Navbar } from "./components/Navbar";
+import { Footer } from "./components/Footer";
+import Marketplace from "./pages/Marketplace";
+import D2CSolutionDetail from "./pages/D2CSolutionDetail";
+import B2CSolutionDetail from "./pages/B2CSolutionDetail";
+import ScrollToTop from './components/ScrollToTop'
 const queryClient = new QueryClient();
 
 const App = () => (
@@ -22,6 +27,8 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+      <ScrollToTop/>
+      <Navbar/>
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/contact" element={<ContactPage />} />
@@ -30,11 +37,14 @@ const App = () => (
           <Route path="/solutions/scalex" element={<B2CScaleX />} />
           <Route path="/services/digifuse" element={<D2CDigiFuse />} />
           <Route path="/services/brandelevate" element={<D2CBrandElevate />} />
-          <Route path="/marketplace/seo" element={<MarketplaceSEO />} />
-          <Route path="/marketplace/social-media" element={<MarketplaceSocialMedia />} />
+          <Route path="/marketplace" element={<Marketplace />} />
+          <Route path="/marketplace/:slug" element={<MarketplaceDetail />} />
+          <Route path="/solutions/b2c/:slug" element={<B2CSolutionDetail />} />
+          <Route path="/solutions/:slug" element={<D2CSolutionDetail />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
+      <Footer/>
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>

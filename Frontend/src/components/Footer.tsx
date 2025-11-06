@@ -68,9 +68,9 @@ export function Footer() {
             <h4 className="font-semibold text-lg mb-3 text-foreground">B2C Solutions</h4>
             <ul className="space-y-2">
               {[
-                { title: "LaunchPad (Basic Service)", path: "/solutions/launchpad" },
-                { title: "GrowthEdge (Advanced Service)", path: "/solutions/growthedge" },
-                { title: "ScaleX (Premium Service)", path: "/solutions/scalex" },
+                { title: "LaunchPad (Basic Service)", path: "/solutions/b2c/launchpad" },
+                { title: "GrowthEdge (Advanced Service)", path: "/solutions/b2c/growthedge" },
+                { title: "ScaleX (Premium Service)", path: "/solutions/b2c/scalex" },
               ].map((item, i) => (
                 <li key={i}>
                   <Link
@@ -89,11 +89,11 @@ export function Footer() {
             <h4 className="font-semibold text-lg mb-3 text-foreground">Marketplace</h4>
             <ul className="space-y-2">
               {[
-                { title: "Myntra Seller Management", path: "/marketplace/myntra" },
-                { title: "Flipkart Seller Management", path: "/marketplace/flipkart" },
-                { title: "Amazon Seller Management", path: "/marketplace/amazon" },
-                { title: "IndiaMart Seller Management", path: "/marketplace/indiamart" },
-                { title: "Justdial Seller Management", path: "/marketplace/justdial" },
+                { title: "Myntra Seller Management", path: "/marketplace/myntra-seller-management" },
+                { title: "Flipkart Seller Management", path: "/marketplace/flipkart-seller-management" },
+                { title: "Amazon Seller Management", path: "/marketplace/amazon-seller-management" },
+                { title: "IndiaMart Seller Management", path: "/marketplace/indiamart-seller-management" },
+                { title: "Justdial Seller Management", path: "/marketplace/justdial-seller-management" },
               ].map((item, i) => (
                 <li key={i}>
                   <Link

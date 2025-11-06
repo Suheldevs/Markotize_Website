@@ -24,8 +24,8 @@ export function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isDemoModalOpen, setIsDemoModalOpen] = useState(false);
 
-  const [openDropdown, setOpenDropdown] = useState(null); // For mobile click toggle
-  const [hoverDropdown, setHoverDropdown] = useState(null); // For desktop hover
+  const [openDropdown, setOpenDropdown] = useState(null); 
+  const [hoverDropdown, setHoverDropdown] = useState(null); 
 
   const navigate = useNavigate();
 
@@ -92,19 +92,19 @@ const menuItems = {
         icon: Rocket,
         title: "LaunchPad (Basic Services)",
         desc: "Ideal for startups to begin their digital journey",
-        path: "/solutions/launchpad",
+        path: "/solutions/b2c/launchpad",
       },
       {
         icon: BarChart3,
         title: "GrowthEdge (Advanced Services)",
         desc: "Grow your online business strategically",
-        path: "/solutions/growthedge",
+        path: "/solutions/b2c/growthedge",
       },
       {
         icon: Layers,
         title: "ScaleX (Premium Services)",
         desc: "Accelerate your brand with complete automation",
-        path: "/solutions/scalex",
+        path: "/solutions/b2c/scalex",
       },
     ],
   },
@@ -224,7 +224,7 @@ const menuItems = {
 
       {openDropdown === id && (
         <div className="pl-6 py-2 space-y-2">
-          {[...data.left, ...data.right].map(({ icon: Icon, title, path }) => (
+          {[...data?.left, ...(data?.right || [])].map(({ icon: Icon, title, path }) => (
             <Link
               key={title}
               to={path}
@@ -244,8 +244,8 @@ const menuItems = {
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? "bg-background/80 backdrop-blur-lg border-b border-border"
-          : "bg-transparent"
+          ? "bg-background/90 backdrop-blur-lg border-b border-border"
+          : "md:bg-transparent bg-background/90"
       }`}
     >
       <div className="container mx-auto lg:px-8 px-4">
@@ -256,7 +256,7 @@ const menuItems = {
               to="/"
               className="text-xl flex justify-center items-center font-bold text-foreground"
             >
-              <img src={logo} className="h-12 dark:bg-none rounded-lg bg-blue-800 mr-2" alt="Logo" /> Morkotize
+              <img src={logo} className="h-10 md:h-12 dark:bg-none rounded-lg bg-blue-800 mr-2" alt="Logo" /> Morkotize
             </Link>
 
             {/* Desktop Menus */}
