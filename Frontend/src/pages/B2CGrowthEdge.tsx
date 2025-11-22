@@ -7,7 +7,6 @@ import { Link } from "react-router-dom";
 export default function B2CGrowthEdge() {
   return (
     <div className="min-h-screen bg-background">
-      <Navbar />
       <div className="pt-32 pb-24">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
@@ -82,7 +81,6 @@ export default function B2CGrowthEdge() {
           </div>
         </div>
       </div>
-      <Footer />
     </div>
   );
 }
